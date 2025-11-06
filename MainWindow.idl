@@ -5,6 +5,7 @@
     {
         MainWindow();
     void CalculateAverages(Object sender, Microsoft.UI.Xaml.RoutedEventArgs e);
-    void UpdateGrades(Object sender, Microsoft.UI.Xaml.RoutedEventArgs e);  // ← ДОБАВИЛИ
+    void UpdateGrades(Object sender, Microsoft.UI.Xaml.RoutedEventArgs e);  // ← ДОБАВИ
+    void HighlightExcellentGrades();  // ← ДОБАВИЛИЛИ
     }
 }

@@ -19,7 +19,7 @@ namespace winrt::StudentGradesTable::implementation
 
         void UpdateGrades(winrt::Windows::Foundation::IInspectable const& sender,
             winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
-
+        void HighlightExcellentGrades();  // ← ДОБАВИЛИ
     private:
         int mathGrades[5] = { 85, 92, 78, 88, 94 };
         int physicsGrades[5] = { 90, 88, 95, 82, 87 };

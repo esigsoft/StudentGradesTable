@@ -98,5 +98,32 @@ namespace winrt::StudentGradesTable::implementation
             Microsoft::UI::Colors::Green()));
         ErrorMessage().Text(L"✅ Оценки успешно обновлены!");
     }
+    void MainWindow::HighlightExcellentGrades()
+    {
+        // Создаем кисти для цветов
+        auto greenBrush = Microsoft::UI::Xaml::Media::SolidColorBrush(
+            Microsoft::UI::Colors::LightGreen());
+        auto whiteBrush = Microsoft::UI::Xaml::Media::SolidColorBrush(
+            Microsoft::UI::Colors::White());
+
+        // Проверяем каждую оценку студента 2 (индекс 1)
+        Math2().Background(mathGrades[1] >= 90 ? greenBrush : whiteBrush);
+        Physics2().Background(physicsGrades[1] >= 90 ? greenBrush : whiteBrush);
+        Chemistry2().Background(chemistryGrades[1] >= 90 ? greenBrush : whiteBrush);
+        Math2Border().Background(mathGrades[1] >= 90 ? greenBrush : whiteBrush);
+
+        // Аналогично для студентов 3, 4, 5
+        Math3().Background(mathGrades[2] >= 90 ? greenBrush : whiteBrush);
+        Physics3().Background(physicsGrades[2] >= 90 ? greenBrush : whiteBrush);
+        Chemistry3().Background(chemistryGrades[2] >= 90 ? greenBrush : whiteBrush);
+
+        Math4().Background(mathGrades[3] >= 90 ? greenBrush : whiteBrush);
+        Physics4().Background(physicsGrades[3] >= 90 ? greenBrush : whiteBrush);
+        Chemistry4().Background(chemistryGrades[3] >= 90 ? greenBrush : whiteBrush);
+
+        Math5().Background(mathGrades[4] >= 90 ? greenBrush : whiteBrush);
+        Physics5().Background(physicsGrades[4] >= 90 ? greenBrush : whiteBrush);
+        Chemistry5().Background(chemistryGrades[4] >= 90 ? greenBrush : whiteBrush);
+    }
 
 }
