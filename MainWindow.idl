@@ -1,0 +1,9 @@
+namespace StudentGradesTable
+{
+    [default_interface]
+    runtimeclass MainWindow : Microsoft.UI.Xaml.Window
+    {
+        MainWindow();
+    void CalculateAverages(Object sender, Microsoft.UI.Xaml.RoutedEventArgs e);
+    }
+}

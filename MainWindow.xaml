@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="StudentGradesTable.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StudentGradesTable"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Таблица оценок студентов">
+
+    <StackPanel Padding="20" Spacing="15">
+
+        <!-- Таблица с оценками -->
+        <Grid x:Name="GradesTable" 
+              BorderBrush="Gray" 
+              BorderThickness="1" 
+              Padding="10"
+              RowSpacing="8" 
+              ColumnSpacing="15">
+
+            <!-- Определение структуры: 5 строк, 3 столбца -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Заголовки (строка 0) -->
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Студент" FontWeight="Bold"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Математика" FontWeight="Bold"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="Физика" FontWeight="Bold"/>
+
+            <!-- Данные студентов (строки 1-4) -->
+            <TextBlock x:Name="Student1" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock x:Name="Math1" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock x:Name="Physics1" Grid.Row="1" Grid.Column="2"/>
+
+            <TextBlock x:Name="Student2" Grid.Row="2" Grid.Column="0"/>
+            <TextBlock x:Name="Math2" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock x:Name="Physics2" Grid.Row="2" Grid.Column="2"/>
+
+            <TextBlock x:Name="Student3" Grid.Row="3" Grid.Column="0"/>
+            <TextBlock x:Name="Math3" Grid.Row="3" Grid.Column="1"/>
+            <TextBlock x:Name="Physics3" Grid.Row="3" Grid.Column="2"/>
+
+            <TextBlock x:Name="Student4" Grid.Row="4" Grid.Column="0"/>
+            <TextBlock x:Name="Math4" Grid.Row="4" Grid.Column="1"/>
+            <TextBlock x:Name="Physics4" Grid.Row="4" Grid.Column="2"/>
+        </Grid>
+
+        <!-- Кнопка расчета -->
+        <Button Content="Показать средние баллы" 
+                Click="CalculateAverages" 
+                HorizontalAlignment="Center"/>
+
+        <!-- Результаты -->
+        <Border BorderBrush="LightGray" 
+                BorderThickness="1" 
+                Padding="15" 
+                Background="#F5F5F5">
+            <StackPanel Spacing="5">
+                <TextBlock Text="Средние баллы:" FontWeight="Bold"/>
+                <TextBlock x:Name="AvgMath"/>
+                <TextBlock x:Name="AvgPhysics"/>
+            </StackPanel>
+        </Border>
+
+    </StackPanel>
+</Window>
