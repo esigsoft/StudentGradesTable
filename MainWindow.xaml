@@ -26,6 +26,8 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <!-- ← ДОБАВИЛИ -->
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -57,6 +59,13 @@
             <TextBlock x:Name="Student4" Grid.Row="4" Grid.Column="0"/>
             <TextBlock x:Name="Math4" Grid.Row="4" Grid.Column="1"/>
             <TextBlock x:Name="Physics4" Grid.Row="4" Grid.Column="2"/>
+
+            <!-- Добавьте ячейки для 5-го студента: -->
+            <TextBlock x:Name="Student5" Grid.Row="5" Grid.Column="0"/>
+            <TextBlock x:Name="Math5" Grid.Row="5" Grid.Column="1"/>
+            <TextBlock x:Name="Physics5" Grid.Row="5" Grid.Column="2"/>
+            <TextBlock x:Name="Chemistry5" Grid.Row="5" Grid.Column="3"/>
+
             <!-- Добавьте заголовок "Химия": -->
             <TextBlock Grid.Row="0" Grid.Column="3" Text="Химия" FontWeight="Bold"/>
 

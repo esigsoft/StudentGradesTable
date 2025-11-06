@@ -18,9 +18,10 @@ namespace winrt::StudentGradesTable::implementation
             winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
 
     private:
-        int mathGrades[4] = { 85, 92, 78, 88 };
-        int physicsGrades[4] = { 90, 88, 95, 82 };
-        int chemistryGrades[4] = { 87, 91, 89, 85 };  // ← ДОБАВИЛИ
+        int mathGrades[5] = { 85, 92, 78, 88, 94 };        // ← изменили [4] на [5], добавили 94
+        int physicsGrades[5] = { 90, 88, 95, 82, 87 };     // ← изменили [4] на [5], добавили 87
+        int chemistryGrades[5] = { 87, 91, 89, 85, 92 };   // ← изменили [4] на [5], добавили 92
+
     };
 
 }
