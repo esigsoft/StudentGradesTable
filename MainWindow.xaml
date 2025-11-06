@@ -45,8 +45,23 @@
 
             <!-- Данные студентов (строки 1-4) -->
             <TextBlock x:Name="Student1" Grid.Row="1" Grid.Column="0"/>
-            <TextBlock x:Name="Math1" Grid.Row="1" Grid.Column="1"/>
-            <TextBlock x:Name="Physics1" Grid.Row="1" Grid.Column="2"/>
+            <!-- ЗАМЕНИТЬ НА: -->
+            <TextBox x:Name="Math1Input" 
+         Grid.Row="1" 
+         Grid.Column="1" 
+         Text="85" 
+         InputScope="Number"/>
+            <TextBox x:Name="Physics1Input" 
+         Grid.Row="1" 
+         Grid.Column="2" 
+         Text="90" 
+         InputScope="Number"/>
+            <TextBox x:Name="Chemistry1Input" 
+         Grid.Row="1" 
+         Grid.Column="3" 
+         Text="87" 
+         InputScope="Number"/>
+
 
             <TextBlock x:Name="Student2" Grid.Row="2" Grid.Column="0"/>
             <TextBlock x:Name="Math2" Grid.Row="2" Grid.Column="1"/>
@@ -81,6 +96,9 @@
         <Button Content="Показать средние баллы" 
                 Click="CalculateAverages" 
                 HorizontalAlignment="Center"/>
+        <Button Content="Обновить оценки Иванова" 
+        Click="UpdateGrades" 
+        HorizontalAlignment="Center"/>
 
         <!-- Результаты -->
         <Border BorderBrush="LightGray" 

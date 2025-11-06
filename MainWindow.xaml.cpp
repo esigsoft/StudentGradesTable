@@ -23,13 +23,11 @@ namespace winrt::StudentGradesTable::implementation
         Student4().Text(L"Козлов К.");
         Student5().Text(L"Новиков Н.");
 
-        Math1().Text(to_hstring(mathGrades[0]));
         Math2().Text(to_hstring(mathGrades[1]));
         Math3().Text(to_hstring(mathGrades[2]));
         Math4().Text(to_hstring(mathGrades[3]));
         Math5().Text(to_hstring(mathGrades[4]));          // индекс 4 = 5-й элемент
 
-        Physics1().Text(to_hstring(physicsGrades[0]));
         Physics2().Text(to_hstring(physicsGrades[1]));
         Physics3().Text(to_hstring(physicsGrades[2]));
         Physics4().Text(to_hstring(physicsGrades[3]));
@@ -66,5 +64,17 @@ namespace winrt::StudentGradesTable::implementation
         AvgPhysics().Text(L"Физика: " + to_hstring(physicsAvg));
         AvgChemistry().Text(L"Химия: " + to_hstring(chemistryAvg));
     }
+    void MainWindow::UpdateGrades(winrt::Windows::Foundation::IInspectable const& sender,
+        winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+    {
+        // Получаем текст из TextBox
+        hstring mathText = Math1Input().Text();
+        hstring physicsText = Physics1Input().Text();
+        hstring chemistryText = Chemistry1Input().Text();
 
+        // Преобразуем текст в числа
+        mathGrades[0] = std::stoi(mathText.c_str());
+        physicsGrades[0] = std::stoi(physicsText.c_str());
+        chemistryGrades[0] = std::stoi(chemistryText.c_str());
+    }
 }
