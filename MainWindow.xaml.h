@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "MainWindow.g.h"
 #include <iomanip>
@@ -20,6 +20,7 @@ namespace winrt::StudentGradesTable::implementation
     private:
         int mathGrades[4] = { 85, 92, 78, 88 };
         int physicsGrades[4] = { 90, 88, 95, 82 };
+        int chemistryGrades[4] = { 87, 91, 89, 85 };  // ← ДОБАВИЛИ
     };
 
 }

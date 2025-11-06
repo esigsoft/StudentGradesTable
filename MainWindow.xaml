@@ -32,6 +32,8 @@
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
+                <!-- ← ДОБАВИЛИ -->
             </Grid.ColumnDefinitions>
 
             <!-- Заголовки (строка 0) -->
@@ -55,6 +57,15 @@
             <TextBlock x:Name="Student4" Grid.Row="4" Grid.Column="0"/>
             <TextBlock x:Name="Math4" Grid.Row="4" Grid.Column="1"/>
             <TextBlock x:Name="Physics4" Grid.Row="4" Grid.Column="2"/>
+            <!-- Добавьте заголовок "Химия": -->
+            <TextBlock Grid.Row="0" Grid.Column="3" Text="Химия" FontWeight="Bold"/>
+
+            <!-- Добавьте ячейки для оценок по химии в каждой строке: -->
+            <TextBlock x:Name="Chemistry1" Grid.Row="1" Grid.Column="3"/>
+            <TextBlock x:Name="Chemistry2" Grid.Row="2" Grid.Column="3"/>
+            <TextBlock x:Name="Chemistry3" Grid.Row="3" Grid.Column="3"/>
+            <TextBlock x:Name="Chemistry4" Grid.Row="4" Grid.Column="3"/>
+
         </Grid>
 
         <!-- Кнопка расчета -->
@@ -71,6 +82,7 @@
                 <TextBlock Text="Средние баллы:" FontWeight="Bold"/>
                 <TextBlock x:Name="AvgMath"/>
                 <TextBlock x:Name="AvgPhysics"/>
+                <TextBlock x:Name="AvgChemistry"/>
             </StackPanel>
         </Border>
 

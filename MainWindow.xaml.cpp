@@ -50,8 +50,16 @@ namespace winrt::StudentGradesTable::implementation
         }
         double physicsAvg = physicsSum / 4.0;
 
+        int chemistrySum = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            chemistrySum += chemistryGrades[i];
+        }
+        double chemistryAvg = chemistrySum / 4.0;
+
         AvgMath().Text(L"Математика: " + to_hstring(mathAvg));
         AvgPhysics().Text(L"Физика: " + to_hstring(physicsAvg));
+        AvgChemistry().Text(L"Химия: " + to_hstring(chemistryAvg));
     }
 
 }
