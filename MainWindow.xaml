@@ -99,6 +99,10 @@
         <Button Content="Обновить оценки Иванова" 
         Click="UpdateGrades" 
         HorizontalAlignment="Center"/>
+        <TextBlock x:Name="ErrorMessage" 
+           Foreground="Red" 
+           FontWeight="Bold" 
+           HorizontalAlignment="Center"/>
 
         <!-- Результаты -->
         <Border BorderBrush="LightGray" 
